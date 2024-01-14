@@ -1,8 +1,15 @@
 package com.example.demoSpringBoot.entity;
 
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 public class Employee {
     private long id;
+
+    @NotNull
+    @Size(min = 3, message = "name must be at least 3 characters")
     private String name;
+
     private String contactNumber;
 
     public Employee() {
