@@ -1,6 +1,7 @@
 package com.example.demoSpringBoot.entity;
 
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
 public class Employee {
@@ -10,6 +11,7 @@ public class Employee {
     @Size(min = 3, message = "name must be at least 3 characters")
     private String name;
 
+    @Pattern(regexp = "[a-zA-Z0-9]{5}", message = "custom message")
     private String contactNumber;
 
     public Employee() {

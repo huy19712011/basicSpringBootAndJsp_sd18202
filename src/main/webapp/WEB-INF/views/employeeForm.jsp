@@ -21,6 +21,7 @@
         <tr>
             <td><form:label path="contactNumber">Contact Number</form:label></td>
             <td><form:input path="contactNumber"/></td>
+            <td><form:errors path="contactNumber" cssStyle="color: red"/></td>
         </tr>
         <tr>
             <td><input type="submit" name="submit" value="Submit"/></td>
